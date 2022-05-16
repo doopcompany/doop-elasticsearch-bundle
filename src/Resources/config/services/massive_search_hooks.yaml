@@ -1,0 +1,10 @@
+services:
+  doop_elasticsearch.massive_search_index_subscriber:
+    class: Doop\ElasticsearchBundle\EventListener\MassiveSearch\IndexSubscriber
+    arguments:
+      $indexManager: '@doop_elasticsearch.index_manager'
+    tags:
+      - { name: kernel.event_subscriber }
+
+  doop_elasticsearch.client:
+    alias: 'massive_search.adapter.elastic.client'

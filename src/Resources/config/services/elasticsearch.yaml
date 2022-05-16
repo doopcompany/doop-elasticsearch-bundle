@@ -1,0 +1,8 @@
+services:
+  doop_elasticsearch.client:
+    class: Elasticsearch\Client
+    factory:
+      - Doop\ElasticsearchBundle\Elasticsearch\ClientFactory
+      - create
+    arguments:
+      - '%doop_elasticsearch.hosts%'

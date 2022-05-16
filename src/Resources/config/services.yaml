@@ -1,0 +1,6 @@
+services:
+  doop_elasticsearch.index_manager:
+    class: Doop\ElasticsearchBundle\Elasticsearch\IndexManager
+    arguments:
+      $indices: '%doop_elasticsearch.indices%'
+      $client: '@doop_elasticsearch.client'
